@@ -1,9 +1,13 @@
+<input type="checkbox" name="checkbox"><input type="checkbox" name="checkbox">
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="favicon.png">
 
 <head>
-    <title>Project</title>
+    
+    <title> MH Jafory </title>
+    <script data-brackets-id='9870' src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mediaquiry.css">
@@ -29,7 +33,7 @@
         </h1>
         <h4 style="padding-left:  14px;padding-top: 8px;color: white;font-weight: 100;">Web and IT Specialist at GD Academy, Astoria, New York
             <span class="menu"> 
-        <a href="tel:516-2888-8767">516-288-8767</a>
+        <a href="tel:516-288-8767">516-288-8767</a>
         </span>
         </h4>
 
@@ -39,8 +43,17 @@
 
     <div class="content">
 
+    </div> 
+    
+    <div id="nav-one">
+            
+          <audio id="beep-one" controls="controls" preload="auto" style="display: none;">
+				<source  src="file/beep.mp3"></source>
+				<source  src="file/beep.mp3"></source>
+				
+			</audio>
+  <a href="#"> <img src="img/mine2.png" class="profil"></a> 
     </div>
-    <img src="img/mine2.png" class="profil">
     <div id="sun">
         <div id="rings">
             <div></div>
@@ -57,6 +70,11 @@
         <h1>About me</h1>
         <p style="padding: 10px">A quick and ambitious learner, A hard worker, responsible, self-starter and loyal. Always arrives on time and prepared to work. An excellent student with good computer skills who can translate school talents to the work environment. Experienced Web Developer with a demonstrated history of worked in Social Media . Skilled in HTML,CSS,JavaScript,PHP, MySQL, Python, Graphics, Live Broadcast, Microsoft Word, and Personal Security. Strong engineering professional with a Certified Web Professional Series focused in Web Page, Adobe Photoshop, Adobe Dreamweaver CS6 from School of Cooperative Technical Education, Manhattan, NY.</p>
 
+
+
+
+
+
     </div>
 
 
@@ -65,37 +83,37 @@
 
 
 
-        <div class="parent" style="font-size:30px;cursor:pointer" onclick="openEdu()">
+        <div class="parent" style="font-size:30px;cursor:pointer" onclick="openEdu();play(); ">
             <div class="child bg-one">
                 <a>Education</a>
             </div>
         </div>
 
-        <div class="parent right" style="font-size:30px;cursor:pointer" onclick="openExp()">
+        <div class="parent right" style="font-size:30px;cursor:pointer" onclick="openExp();play();">
             <div class="child bg-two">
                 <a>Work Experiences</a>
             </div>
         </div>
 
-        <div class="parent" style="font-size:30px;cursor:pointer" onclick="openSki()">
+        <div class="parent" style="font-size:30px;cursor:pointer" onclick="openSki();play();">
             <div class="child bg-three">
                 <a>Skill</a>
             </div>
         </div>
 
-        <div class="parent right" style="font-size:30px;cursor:pointer" onclick="openPro()">
+        <div class="parent right" style="font-size:30px;cursor:pointer" onclick="openPro();play();">
             <div class="child bg-four">
-                <a>Web Projects</a>
+                <a>Portfolio</a>
             </div>
         </div>
 
-        <div class="parent" style="font-size:30px;cursor:pointer" onclick="openCer()">
+        <div class="parent" style="font-size:30px;cursor:pointer" onclick="openCer();play();">
             <div class="child bg-five">
                 <a style="font-size: 24px;">Certifications & Awards</a>
             </div>
         </div>
 
-        <div class="parent right" style="font-size:30px;cursor:pointer" onclick="openCon()">
+        <div class="parent right" style="font-size:30px;cursor:pointer" onclick="openCon();play();">
             <div class="child bg-six">
                 <a>Contact Me</a>
             </div>
@@ -106,8 +124,8 @@
 
     <footer>
 
-        <div style="padding: 10px">
-            Copyright by MH Jafory 2017
+        <div style="padding: 10px;text-transform: uppercase; font-family:cursive;">
+            This site was built in HTML5, CSS3, AND JS
         </div>
     </footer>
 
@@ -118,7 +136,7 @@
     <!--    Contact Me-->
     <div id="tab3" class="overlay">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeCon()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeCon();play();">&times;</a>
 
         <div class="overlay-content">
             <h2>Get In Touch</h2>
@@ -136,26 +154,32 @@
                         <a href="https://www.linkedin.com/in/mh-jafory-a56508131/"> <img src="img/lkicon400_400.png" alt="lnicon" class="social">
                             
             </a>
-                         
+
                     </div>
-                   
+
                 </div>
                 <div class="col span_1_of_2">
                     <div class="coct">
-                        <form action="/action_page.php">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-
-
-                            <label for="subject">Messages</label>
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-                            <input type="submit" value="Submit">
-                        </form>
+                        <form action="send.php" method="post">
+        <label for="fname">First Name</label>
+          
+        <input type="text" id="fname" name="first_name" placeholder="Your first name..">
+          
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="last_name" placeholder="Your last name..">
+          
+        <label for="country">E-mail</label>
+        <input type="text" id="country" name="email" placeholder="Your email">
+        
+          <label for="country">Telephone</label>
+        <input type="text" id="country" name="telephone" placeholder="111-111-1111">
+         
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="comments" placeholder="Write something.." style="height:170px"></textarea>
+          
+        <input type="submit" value="Submit">
+          
+      </form>
                     </div>
                 </div>
             </div>
@@ -165,7 +189,7 @@
     <!--    Education-->
     <div id="tab1" class="overlay">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeEdu()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeEdu();play();">&times;</a>
 
         <div class="overlay-content">
             <h2>Education</h2>
@@ -191,7 +215,7 @@
     <!--   Work Experiences-->
     <div id="tab2" class="overlay">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeExp()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeExp();play();">&times;</a>
 
         <div class="overlay-content">
             <h2>Experiences</h2>
@@ -199,13 +223,20 @@
             <div class="section group">
 
                 <div class="col span_1_of_2">
+
+
+                    <a href="http://table87.com/">
+                 Table 87 - Home of the Coal Oven Slice
+            </a>
+                    <p style="font-weight:lighter; font-style: italic;"> Web Developer, Jan 2018 - Present</p>
+
+
                     <a href="http://www.gdacademyus.org">
                  Gawsiah Darus-Sunnah Academy 
             </a>
-                    <p style="font-weight:lighter; font-style: italic;"> Web Administrator, July 2017 - Present</p>
+                    <p style="font-weight:lighter; font-style: italic;"> Web and IT Specialist, July 2017 - Present</p>
 
-                    <a href="https://www.bklynlibrary.org/">Brooklyn Public Library | Cypress Hills Library Branch </a>
-                    <p style="font-weight:lighter; font-style: italic;">Tech Intern, Aug, 2017 – Nov 2017</p>
+
 
 
 
@@ -213,17 +244,25 @@
                 </div>
                 <div class="col span_1_of_2">
 
+                    <a href="https://www.bklynlibrary.org/">Brooklyn Public Library | Cypress Hills Library Branch </a>
+                    <p style="font-weight:lighter; font-style: italic;">Tech Intern, Aug, 2017 – Nov 2017</p>
+
+
                     <a href="http://www.mta.info/">Metropolitan Transportation Authority, NY, NY </a>
                     <p style="font-weight:lighter; font-style: italic;">Tech Intern, May, 2017 - June, 2017</p>
 
-                    <a href="https://www.amallu.com/">Amallu Inc, Manhattan, NY </a>
-                    <p style="font-weight:lighter; font-style: italic;">Web Intern, Nov, 2016 - May, 2017</p>
-
-
                 </div>
 
+
+
+
             </div>
-            <div class="co"><a> FIC Inc, Jamaica, NY</a>
+            <div class="co">
+
+                <a href="https://www.amallu.com/">Amallu Inc, Manhattan, NY </a>
+                <p style="font-weight:lighter; font-style: italic;">Web Intern, Nov, 2016 - May, 2017</p>
+
+                <a> FIC Inc, Jamaica, NY</a>
                 <p style="font-weight:lighter; font-style: italic;">Teacher and IT & Website Admin, May, 2016 - Feb, 2017</p>
             </div>
         </div>
@@ -232,7 +271,7 @@
     <!--Awards & Certifications-->
     <div id="tab4" class="overlay">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeCer()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeCer();play();">&times;</a>
 
         <div class="overlay-content">
             <h2>Awards & Certifications</h2>
@@ -268,7 +307,7 @@
 
                         <p> ♦ Excellence in Work Based Learning</p>
 
-            
+
 
                         <p> ♦ Work Readiness Excellence</p>
 
@@ -283,12 +322,25 @@
     <!--Projects-->
     <div id="tab5" class="overlay">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closePro()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closePro();play();">&times;</a>
 
-        <div class="overlay-content">
-            <h2>Web Projects</h2>
+        <div class="overlay-content" id="nav-one">
+            
+            
+            <audio id="beep-one" controls="controls" preload="auto" style="display: none;">
+				<source  src="file/beep.mp3"></source>
+				<source  src="file/beep.mp3"></source>
+				
+			</audio>
+            
+            <h2>Corporate</h2>
             <div class="section group">
                 <div class="col span_1_of_2">
+
+                    <a href="http://table87.com/" target="_blank"> 
+                        <img src="img/tb87.png" alt="" class="project"> 
+                    </a>
+
                     <a href="https://codebook17.000webhostapp.com/" target="_blank"> 
                         <img src="img/project13.png" alt="" class="project"> 
                     </a>
@@ -301,26 +353,31 @@
                     <a href="https://jaffery97.github.io/gdd/" target="_blank">  
                         <img src="img/project15.png" alt="" class="project">
                     </a>
-               <a href="http://gdacademyus.org/gdac17/edchat/" target="_blank">
+                    <a href="http://gdacademyus.org/gdac17/edchat/" target="_blank">
                    <img src="img/project9.png" alt="" class="project">
                     </a>
-                
-                
+
+
                 </div>
                 <div class="col span_1_of_2">
-                 <a href="https://jaffery97.github.io/nycompetion/">
+
+                    <a href="http://gdacademyus.org/gdac17/ISE/">
+                    <img src="img/ise.png" alt="" class="project">
+                    </a>
+
+                    <a href="https://jaffery97.github.io/nycompetion/">
                     <img src="img/project17.png" alt="" class="project">
                     </a>
-                <a href="https://jaffery97.github.io/codebook1/" target="_blank">
+                    <a href="https://jaffery97.github.io/codebook1/" target="_blank">
                     <img src="img/project18.png" alt="" class="project">
                     </a>
-                <a href="https://jaffery97.github.io/applescreen/index.html" target="_blank">
+                    <a href="https://jaffery97.github.io/applescreen/index.html" target="_blank">
                     <img src="img/project4.png" alt="" class="project">
                     </a>
-                <a href="https://jaffery97.github.io/cbtv/" target="_blank">
+                    <a href="https://jaffery97.github.io/cbtv/" target="_blank">
                     <img src="img/project16.png" alt="" class="project">
                     </a>
-               <a href="https://jaffery97.github.io/codebook2/" target="_blank">
+                    <a href="https://jaffery97.github.io/codebook2/" target="_blank">
                    <img src="img/project12.png" alt="" class="project">
                     </a>
                 </div>
@@ -330,7 +387,7 @@
     <!-- Skills-->
     <div id="tab6" class="overlay">
 
-        <a href="javascript:void(0)" class="closebtn" onclick="closeSki()">&times;</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSki();play();">&times;</a>
 
         <div class="overlay-content">
             <h2>Skills</h2>
@@ -378,6 +435,35 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+    
+    	
+
+
+<script>
+    var beepOne = $("#beep-one")[0];
+$("#nav-one a")
+	.mouseenter(function() {
+		beepOne.play();
+	});
+
+</script>
+
+    <div style="display: none">
+
+
+        <script>
+            function play() {
+                var audio = document.getElementById("audio");
+                audio.play();
+            }
+        </script>
+
+        <img src="img/skill.jpg" value="PLAY" onclick="play()" width="100%">
+        <audio id="audio" src="file/beep.mp3"></audio>
+
     </div>
 
     <script type="text/javascript" src="js/omode.js"></script>
