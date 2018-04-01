@@ -1,5 +1,6 @@
   body{
         background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 50%, rgba(188,224,238,1) 100%);
+      
     }
     object{
        -webkit-box-shadow: 0px 0px 67px 27px rgba(0,0,0,0.9);
@@ -15,7 +16,6 @@ footer {
     text-align: center;
     width: 100%;
     bottom: 0px;
-    
 }
 
 .profile {
@@ -145,4 +145,12 @@ input[type=submit]:hover {
     width: 80%;
     padding: 5px;
     box-shadow: 0px 0px 22px 0px white;
+}
+
+.abme {
+    padding: 44px;
+    line-height: 32px;
+text-align: justify;
+    font-family: 'Muli', sans-serif;
+
 }
