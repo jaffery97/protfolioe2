@@ -6,6 +6,8 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'serif', sans-serif;
+    height: 100%;
+    
 }
 
 nav {
@@ -62,7 +64,7 @@ nav {
     text-align: justify;
     transition: .37s;
     font-family: 'Muli', sans-serif;
-    
+    font-size: 13px;
 
 }
 
